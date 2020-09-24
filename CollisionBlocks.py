@@ -2,6 +2,7 @@ import pygame
 import random
 import sys
 
+name = input("Enter Your Name ")
 pygame.init()
 
 WIDTH = 1200
@@ -114,7 +115,7 @@ while not game_over:
     score = update_enemy_positions(enemy_list, score)
     SPEED = set_level(score, SPEED)
 
-    text = "Score:" + str(score)
+    text = "{} Your Score is:".format(name) + str(score)
     label = myFont.render(text, 1, score_col)
     screen.blit(label, (WIDTH - 200, HEIGHT - 40))
 
